@@ -26,7 +26,7 @@
       //get all possible x and y-values
    for (var i = 0; i < data.length; i++) 
     {
-      if (xValues.indexOf(data[i].x) === -1) 
+      if (xValues.indexOf(data[i].Date) === -1) 
       {
         xValues.push(data[i].x);
       }
