@@ -18,20 +18,31 @@
   function showInfo(data, tabletop) 
   {
     var xValues = []; //all the values which are shown on the x-axis
-    var yValues = []; //all the values which are shown on the y-axis
+    var yValues1 = []; //all the values which are shown on the y-axis
+    var yValues2 = []; //all the values which are shown on the y-axis
     alert('Successfully processed!')
     console.log(data);
     
       //get all possible x and y-values
-   for (var i = 0; i < data.length; i++) 
+   for (var i = 0; i < data.length; 2) 
     {
       if (xValues.indexOf(data[i].x) === -1) 
       {
         xValues.push(data[i].x);
       }
-      if (yValues.indexOf(data[i].y) === -1) 
+      if(var = 1 )
       {
-        yValues.push(data[i].y);
+        if (yValues1.indexOf(data[i].y) === -1) 
+        {
+          yValues1.push(data[i].y);
+        }
+      }
+      if(var = 2 )
+      {
+        if (yValues2.indexOf(data[i].y) === -1) 
+        {
+          yValues2.push(data[i].y);
+        }
       }
     }
     
@@ -41,9 +52,9 @@
   var x = 0;
   var y = 0;
 
-  for (i = 0; i < data.length; i++) {
+  for (i = 0; i < 1; i++) {
     x = xValues.indexOf(data[i].x);
-    y = yValues.indexOf(data[i].y);
+    y = yValues1.indexOf(data[i].y);
     if (x !== -1 && y !== -1) {
       zValues[y][x] = parseFloat(data[i].z);
     }
@@ -52,7 +63,7 @@
   //the data which is passed to Plotly
   var plotlyData = [{
     x: xValues,
-    y: yValues,
+    y: yValues1,
     z: zValues,
     type: 'heatmap'
   }];
