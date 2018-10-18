@@ -13,7 +13,7 @@
     var xValues = []; //all the values which are shown on the x-axis
     var yValues = []; //all the values which are shown on the y-axis
     alert('Successfully processed!')
-    console.log(googleSheet);
+    console.log(data);
     
       //get all possible x and y-values
    for (var i = 0; i < data.length; i++) 
