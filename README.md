@@ -24,20 +24,20 @@
     console.log(data);
     
       //get all possible x and y-values
-   for (var i = 0; i < data.length; 2) 
+   for (var i = 0; i < data.length; i++) 
     {
       if (xValues.indexOf(data[i].x) === -1) 
       {
         xValues.push(data[i].x);
       }
-      if(i === 1 )
+      //if(i === 1 )
       {
         if (yValues1.indexOf(data[i].y) === -1) 
         {
           yValues1.push(data[i].y);
         }
       }
-      if(i === 2 )
+      //if(i === 2 )
       {
         if (yValues2.indexOf(data[i].y) === -1) 
         {
