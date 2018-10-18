@@ -8,10 +8,50 @@
                      simpleSheet: true } )
   }
 
-  function showInfo(data, tabletop) {
+  function showInfo(data, tabletop) 
+  {
+    var xValues = []; //all the values which are shown on the x-axis
+    var yValues = []; //all the values which are shown on the y-axis
     alert('Successfully processed!')
-    googleSheet = JSON.parse(JSON.stringify(data));
     console.log(googleSheet);
+    
+      //get all possible x and y-values
+   for (var i = 0; i < data.length; i++) 
+    {
+      if (xValues.indexOf(data[i].x) === -1) 
+      {
+        xValues.push(data[i].x);
+      }
+      if (yValues.indexOf(data[i].y) === -1) 
+      {
+        yValues.push(data[i].y);
+      }
+    }
+    
+  //create an empty array for all possible z-values based on the dimensions of x and y
+  var zValues = new Array(yValues.length).fill(0).map(row => new Array(xValues.length).fill(0));
+
+  var x = 0;
+  var y = 0;
+
+  for (i = 0; i < data.length; i++) {
+    x = xValues.indexOf(data[i].x);
+    y = yValues.indexOf(data[i].y);
+    if (x !== -1 && y !== -1) {
+      zValues[y][x] = parseFloat(data[i].z);
+    }
+  }
+
+  //the data which is passed to Plotly
+  var plotlyData = [{
+    x: xValues,
+    y: yValues,
+    z: zValues,
+    type: 'heatmap'
+  }];
+  
+  //finally draw the plot
+  Plotly.plot('myPlot', plotlyData);
   }
 
   window.addEventListener('DOMContentLoaded', init)
