@@ -1,4 +1,5 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script type='text/javascript'>
   var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1biDY9jaOJvXGdSD_sqdE8DugCfVZ8_EL5hPNEU9utSc/edit?usp=sharing';
 
