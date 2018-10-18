@@ -30,14 +30,14 @@
       {
         xValues.push(data[i].x);
       }
-      if(var = 1 )
+      if(var === 1 )
       {
         if (yValues1.indexOf(data[i].y) === -1) 
         {
           yValues1.push(data[i].y);
         }
       }
-      if(var = 2 )
+      if(var === 2 )
       {
         if (yValues2.indexOf(data[i].y) === -1) 
         {
