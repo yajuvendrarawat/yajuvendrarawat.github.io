@@ -10,7 +10,8 @@
 
   function showInfo(data, tabletop) {
     alert('Successfully processed!')
-    console.log(data);
+    googleSheet = JSON.parse(JSON.stringify(data));
+    console.log(googleSheet);
   }
 
   window.addEventListener('DOMContentLoaded', init)
