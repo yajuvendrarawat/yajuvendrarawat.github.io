@@ -67,7 +67,7 @@
   }];
   
   //finally draw the plot
-  Plotly.plot('myPlot', plotlyData);
+  Plotly.plot('myPlot', plotlyData, { margin: { t: 0 } });
   }
 
   window.addEventListener('DOMContentLoaded', init)
