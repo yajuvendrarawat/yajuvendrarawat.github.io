@@ -65,7 +65,7 @@
     x: xValues,
     y: yValues1
   }];
-    var plotlyData = [{
+    var plotlyData1 = [{
     x: xValues,
     y: yValues2
   }];
