@@ -47,7 +47,7 @@
     }
     
   //create an empty array for all possible z-values based on the dimensions of x and y
-  var zValues = new Array(yValues.length).fill(0).map(row => new Array(xValues.length).fill(0));
+  var zValues = new Array(yValues1.length).fill(0).map(row => new Array(xValues.length).fill(0));
 
   var x = 0;
   var y = 0;
