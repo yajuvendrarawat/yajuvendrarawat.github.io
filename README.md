@@ -26,20 +26,20 @@
       //get all possible x and y-values
    for (var i = 0; i < data.length; i++) 
     {
-      if (xValues.indexOf(data[i].Date) === -1) 
+     // if (xValues.indexOf(data[i].Date) === -1) 
       {
         xValues.push(data[i].Date);
       }
       //if(i === 1 )
       {
-        if (yValues1.indexOf(data[i].TempC) === -1) 
+      //  if (yValues1.indexOf(data[i].TempC) === -1) 
         {
           yValues1.push(data[i].TempC);
         }
       }
       //if(i === 2 )
       {
-        if (yValues2.indexOf(data[i].Humid) === -1) 
+      //  if (yValues2.indexOf(data[i].Humid) === -1) 
         {
           yValues2.push(data[i].Humid);
         }
