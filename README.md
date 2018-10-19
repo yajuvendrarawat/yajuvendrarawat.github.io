@@ -81,10 +81,10 @@
   xaxis2: {domain: [0.55, 1]}
   };
   
-  var graphOptions = {layout: layout, filename: "simple-subplot", fileopt: "overwrite"};
+  //var graphOptions = {layout: layout, filename: "simple-subplot", fileopt: "overwrite"};
   //finally draw the plot
-  //Plotly.plot('myPlot', plotlyData, { margin: { t: 0 } });
-  Plotly.plot(data, graphOptions, function (err, msg) {console.log(msg);});
+  Plotly.plot('myPlot', plotlyData, { margin: { t: 0 } });
+ // Plotly.plot(data, graphOptions, function (err, msg) {console.log(msg);});
      
   }
 
