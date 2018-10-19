@@ -63,9 +63,7 @@
   //the data which is passed to Plotly
   var plotlyData = [{
     x: xValues,
-    y: yValues1,
-    z: zValues,
-    type: 'heatmap'
+    y: yValues1
   }];
   
   //finally draw the plot
