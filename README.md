@@ -72,7 +72,7 @@
   
   //finally draw the plot
   Plotly.plot('myPlot', xValues, yValues1);
-  Plotly.plot('myPlot', xValues, yValues2);
+  //Plotly.plot('myPlot', xValues, yValues2);
   }
 
   window.addEventListener('DOMContentLoaded', init)
