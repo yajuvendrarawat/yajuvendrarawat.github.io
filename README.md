@@ -67,7 +67,7 @@
   }];
   
   //finally draw the plot
-  Plotly.plot('myPlot', plotlyData);
+  Plotly.plot('myPlot', xValues, yValues1);
   }
 
   window.addEventListener('DOMContentLoaded', init)
