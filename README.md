@@ -66,8 +66,19 @@
     y: yValues1
   }];
   
+  var plotlyData1 = [{
+    x: xValues,
+    y: yValues2
+  }];
+  
   //finally draw the plot
-  Plotly.plot('myPlot', plotlyData, { margin: { t: 0 } });
+  //Plotly.plot('myPlot', plotlyData, { margin: { t: 0 } });
+  
+  fig = Plotly.make_subplots(rows=1, cols=2)
+  fig.append_trace(plotlyData, 1, 1)
+  fig.append_trace(plotlyData1, 1, 2)
+  
+  
   }
 
   window.addEventListener('DOMContentLoaded', init)
