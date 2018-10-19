@@ -68,17 +68,24 @@
   
   var plotlyData1 = [{
     x: xValues,
-    y: yValues2
+    y: yValues2,
+    xaxis: "x2",
+    yaxis: "y2"
   }];
   
+  var data = [plotlyData, plotlyData1];
+  
+  var layout = {
+  xaxis: {domain: [0, 0.45]},
+  yaxis2: {anchor: "x2"},
+  xaxis2: {domain: [0.55, 1]}
+  };
+  
+  var graphOptions = {layout: layout, filename: "simple-subplot", fileopt: "overwrite"};
   //finally draw the plot
   //Plotly.plot('myPlot', plotlyData, { margin: { t: 0 } });
-  
-  fig = Plotly.tools.make_subplots(rows=1, cols=2)
-  fig.append_trace(plotlyData, 1, 1)
-  fig.append_trace(plotlyData1, 1, 2)
-  
-  
+  plotly.plot(data, graphOptions, function (err, msg) {console.log(msg);});
+     
   }
 
   window.addEventListener('DOMContentLoaded', init)
