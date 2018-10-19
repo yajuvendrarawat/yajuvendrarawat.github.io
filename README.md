@@ -65,9 +65,14 @@
     x: xValues,
     y: yValues1
   }];
+    var plotlyData = [{
+    x: xValues,
+    y: yValues2
+  }];
   
   //finally draw the plot
   Plotly.plot('myPlot', xValues, yValues1);
+  Plotly.plot('myPlot', xValues, yValues2);
   }
 
   window.addEventListener('DOMContentLoaded', init)
