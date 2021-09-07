@@ -8,7 +8,7 @@
 <div id="myPlot"></div>
 <script type='text/javascript'>
  
-var publicSpreadsheetUrl='https://docs.google.com/spreadsheets/d/1biDY9jaOJvXGdSD_sqdE8DugCfVZ8_EL5hPNEU9utSc/pub?output=csv';
+var publicSpreadsheetUrl='https://docs.google.com/spreadsheets/d/1biDY9jaOJvXGdSD_sqdE8DugCfVZ8_EL5hPNEU9utSc/';
   
   function init() {
     Tabletop.init( { key: publicSpreadsheetUrl,
