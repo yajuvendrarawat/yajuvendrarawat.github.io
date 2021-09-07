@@ -3,17 +3,19 @@
 
 ## The work is in progress you should see the site running very soon
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <div id="myPlot"></div>
 <script type='text/javascript'>
  
-var publicSpreadsheetUrl='https://docs.google.com/spreadsheets/d/1biDY9jaOJvXGdSD_sqdE8DugCfVZ8_EL5hPNEU9utSc/';
+var publicSpreadsheetUrl='https://docs.google.com/spreadsheets/d/e/2PACX-1vTBjjumI_CAILUHpsOa6sGGrq2O9caxS_rDzXXpiUW2MO4_nYOn0beRvDj1YjLcuHDoYQuLyC4A3ikM/pub?output=csv';
   
   function init() {
-    Tabletop.init( { key: publicSpreadsheetUrl,
-                     callback: showInfo,
-                     simpleSheet: true } )
+    Papa.parse( publicSpreadsheetUrl, {
+          download: true,
+          header: true,
+          complete: showInfo
+  } )
   }
 
   function showInfo(data, tabletop) 
