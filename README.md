@@ -18,8 +18,9 @@ var publicSpreadsheetUrl='https://docs.google.com/spreadsheets/d/e/2PACX-1vTBjju
   } )
   }
 
-  function showInfo(data, tabletop) 
+  function showInfo(results) 
   {
+    var data = results.data;
     var xValues = []; //all the values which are shown on the x-axis
     var yValues1 = []; //all the values which are shown on the y-axis
     var yValues2 = []; //all the values which are shown on the y-axis
