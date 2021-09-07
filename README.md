@@ -17,7 +17,7 @@ var publicSpreadsheetUrl='https://docs.google.com/spreadsheets/d/e/2PACX-1vTBjju
           complete: showInfo
   } )
   }
-
+  window.addEventListener('DOMContentLoaded', init)
   function showInfo(results) 
   {
     var data = results.data;
