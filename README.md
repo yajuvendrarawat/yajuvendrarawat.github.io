@@ -1,5 +1,5 @@
 
-### Welcome to Yajuvendra's Page
+### Welcome to Yajuvendra's IOT sensor live data.
 
 ## The work is in progress you should see the site running very soon
 
